@@ -1,0 +1,269 @@
+.card_poke{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.card_total{
+    
+    width: 17rem;
+    border: 0.5em solid #999;
+    border-radius: 0.7em;
+    cursor: pointer;
+    transition: transform 350ms ease;
+    margin: 1rem;
+    background-color: rgb(255, 255, 255);
+}
+.card_total:hover{
+    transform: scale(1.03);
+}
+.card_img{
+    background-color: #555;
+    aspect-ratio: 2;
+    position: relative;
+   
+   
+   }
+   .poke_img{
+    position: absolute;
+    width: 60%;
+    left: 50%;
+    transform: translate(-50%);
+    top: 1.5em;
+   }
+.poke_body{
+    padding: 3.5em 1em 2em;
+}
+.poke_name{
+    text-align: center;
+    text-transform: capitalize;
+    font-size: 1.6rem;
+    font-weight: 400;
+    margin-bottom: 0.2em;
+}
+.poke_types{
+   display: flex;
+   justify-content:center ;
+   gap: 0.7em;
+   margin-bottom: 1em; 
+}
+.poke_li{
+    text-transform: capitalize;
+    border: 1px solid white;
+    border-radius: 1rem;
+    width: 5rem;
+}
+.poke_li:nth-child(2)::before{
+    content: '/';
+    padding-right: 0.7em;
+}
+.poke_hr{
+    margin-bottom: 1em;
+    border: 1px solid #ccc4;
+}
+.poke_stats{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    justify-items:center;
+    gap: 1em 0.2em;
+}
+.poke_stat{
+    display: grid;
+    gap: 0.5em;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+}
+.poke_stat_name{
+ font-size: 0.7rem;
+ font-weight: 300;
+ text-transform: uppercase;
+ 
+}
+.poke_stat_info{
+    font-weight: 500;
+    font-size: 1rem;
+}
+.fire-gradient{
+    background: rgb(255,255,255);
+    background: linear-gradient(0deg, rgba(255,255,255,0.9964912280701754) 0%, rgba(255,70,0,1) 100%);
+}
+.grass-gradient{
+    background: rgb(255,255,255);
+    background: linear-gradient(0deg, rgba(255,255,255,0.9964912280701754) 0%, rgba(27,161,0,1) 100%);
+    ;
+}
+.water-gradient{
+    background: rgb(255,255,255);
+    background: linear-gradient(0deg, rgba(255,255,255,0.9964912280701754) 0%, rgba(0,13,255,1) 100%);
+}
+.bug-gradient{
+    background: rgb(255,255,255);
+    background: linear-gradient(0deg, rgba(255,255,255,0.9964912280701754) 0%, rgba(0,255,5,1) 100%);
+}
+.normal-gradient{
+    background: rgb(255,255,255);
+background: linear-gradient(0deg, rgba(255,255,255,0.9964912280701754) 0%, rgba(139,98,127,1) 100%);
+}
+.fighting-gradient{
+    background: rgb(255,255,255);
+background: linear-gradient(0deg, rgba(255,255,255,0.9964912280701754) 0%, rgba(152,52,22,1) 100%);
+}
+.poison-gradient{
+    background: rgb(255,255,255);
+background: linear-gradient(0deg, rgba(255,255,255,0.9964912280701754) 0%, rgba(139,3,243,1) 100%);
+}
+.psychic-gradient{
+    background: rgb(255,255,255);
+background: linear-gradient(0deg, rgba(255,255,255,0.9964912280701754) 0%, rgba(247,107,255,1) 100%);
+}
+.dark-gradient{
+    background: rgb(253,248,254);
+background: linear-gradient(0deg, rgba(253,248,254,0.9964912280701754) 0%, rgba(0,0,0,1) 100%);
+}
+.steel-gradient{
+    background: rgb(248,254,251);
+background: linear-gradient(0deg, rgba(248,254,251,0.9964912280701754) 0%, rgba(61,92,77,1) 100%);
+}
+.rock-gradient{
+    background: rgb(248,254,251);
+    background: linear-gradient(0deg, rgba(248,254,251,0.9964912280701754) 0%, rgba(65,65,65,1) 91%);
+}
+.dragon-gradient{
+    background: rgb(248,254,251);
+background: linear-gradient(0deg, rgba(248,254,251,0.9964912280701754) 0%, rgba(71,138,147,1) 100%);
+}
+.electric-gradient{
+    background: rgb(248,254,251);
+background: linear-gradient(0deg, rgba(248,254,251,0.9964912280701754) 0%, rgba(204,195,95,1) 100%);
+}
+.flying-gradient{
+    background: rgb(248,254,251);
+background: linear-gradient(0deg, rgba(248,254,251,0.9964912280701754) 0%, rgba(165,222,236,1) 100%);
+}
+.ground-gradient{
+    background: rgb(248,254,251);
+background: linear-gradient(0deg, rgba(248,254,251,0.9964912280701754) 0%, rgba(153,137,85,1) 100%);
+}
+.ghost-gradient{
+    background: rgb(248,254,251);
+background: linear-gradient(0deg, rgba(248,254,251,0.9964912280701754) 0%, rgba(83,51,113,1) 100%);
+}
+.ice-gradient{
+    background: rgb(248,254,251);
+background: linear-gradient(0deg, rgba(248,254,251,0.9964912280701754) 0%, rgba(104,233,246,1) 100%);
+}
+.fairy-gradient{
+    background: rgb(248,254,251);
+background: linear-gradient(0deg, rgba(248,254,251,0.9964912280701754) 1%, rgba(214,135,238,1) 84%);
+}
+.fire-border{
+border-color:rgba(255,70,0,1);
+}
+.grass-border{
+    border-color: rgba(27,161,0,1);
+}
+.water-border{
+border-color: rgba(0,13,255,1);
+}
+.bug-border{
+    border-color:rgba(0,255,5,1) ;
+}
+.normal-border{
+    border-color: rgba(139,98,127,1);
+}
+.fighting-border{
+    border-color: rgba(152,52,22,1);
+}
+.poison-border{
+    border-color:  rgba(139,3,243,1);
+}
+.psychic-border{
+    border-color:rgba(247,107,255,1) ;
+}
+.dark-border{
+    border-color: rgba(0,0,0,1);
+}
+.steel-border{
+    border-color: rgba(61,92,77,1);
+}
+.rock-border{
+    border-color:  rgba(65,65,65,1);
+}
+.dragon-border{
+    border-color: rgba(71,138,147,1);
+}
+.electric-border{
+    border-color: rgba(204,195,95,1);
+}
+.flying-border{
+    border-color:rgba(165,222,236,1) ;
+}
+.ground-border{
+    border-color: rgba(153,137,85,1);
+}
+.ghost-border{
+    border-color: rgba(83,51,113,1);
+}
+.ice-border{
+    border-color:rgba(104,233,246,1) ;
+}
+.fairy-border{
+    border-color:rgba(214,135,238,1) ;
+}
+.fire-color{
+    color:rgba(255,70,0,1) ;
+}
+.grass-color{
+    color:  rgba(27,161,0,1) ;
+}
+.water-color{
+    color:rgba(0,13,255,1) ;
+}
+.bug-color{
+    color:rgba(0,255,5,1) ;
+}
+.normal-color{
+    color: rgba(139,98,127,1);
+}
+.fighting-color{
+    color: rgba(152,52,22,1) ;
+}
+.poison-color{
+    color: rgba(139,3,243,1) ;
+}.psychic-color{
+    color:rgba(247,107,255,1) ;
+}
+.dark-color{
+    color: rgba(0,0,0,1) ;
+}
+.steel-color{
+    color:rgba(61,92,77,1) ;
+}
+.rock-color{
+    color: rgba(65,65,65,1) ;
+}
+.dragon-color{
+    color:rgba(71,138,147,1) ;
+}
+.electric-color{
+    color: rgba(204,195,95,1) ;
+}
+.flying-color{
+    color:rgba(165,222,236,1) ;
+}
+.ground-color{
+    color:rgba(153,137,85,1) ;
+}
+.ghost-color{
+    color: rgba(83,51,113,1) ;
+}
+.ice-color{
+    color:rgba(104,233,246,1) ;
+}
+.fairy-color{
+    color:rgba(214,135,238,1) ;
+}
