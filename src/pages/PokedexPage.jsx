@@ -15,36 +15,32 @@ const PokedexPage = () => {
   const [typeSelecter, setTypeSelecter] = useState('all Pokemons')
 
     const trainer =useSelector(store=>store.trainer)
-    const url= 'https://pokeapi.co/api/v2/pokemon?offset=0&limit=20'
+    const url= 'https://pokeapi.co/api/v2/pokemon?offset=0&limit=1286'
     const [ pokemons, getPokemons,getTypePokemon ]=useFetch(url)
 
-    const pokemon_Name=pokemons?.filter(pokemon=>pokemon.name.toLowerCase().includes(inputValue?.toLocaleLowerCase()))
-    console.log(pokemons)
-    const logicPage=()=>{
-      const poke_por_page=20
-      const sliceStart=(currenPage -1)*poke_por_page
-      const sliceEnd=sliceStart+poke_por_page
-      const pokeinpage=pokemon_Name.slice(sliceEnd,sliceStart)
-
-      const lastPage=Math.ceil(pokemon_Name.lenght/poke_por_page)||1
-
-      const pagesBlock=5
-      const actualblock=Math.ceil(currenPage/pagesBlock)
-
-      const pagesinBlock=[]
-      const minpag= (actualblock-1)*poke_por_page+1
-      const maxPage=actualblock*poke_por_page
-
-      for(let i=minpag;i<=maxPage;i++){
-        if(i<=lastPage){
-          pagesinBlock.push(i)
-        }
-      }
-      return{pokeinpage,lastPage,pagesinBlock}
-    }
-    const{pokeinpage,lastPage,pagesinBlock}=logicPage
-
+const pokeFiltered=pokemons?.results.filter(poke=>poke.name.toLowerCase().includes(inputValue?.toLowerCase()))
    
+    
+    
+      const pokePorPage=20
+      const lastIndex=currenPage*pokePorPage
+      const firstIndex=lastIndex-pokePorPage
+      const pokepaginated=pokeFiltered?.slice(firstIndex,lastIndex)
+
+    
+    
+    
+    
+
+    const handledBack=()=>{
+      setCurrenPage(currenPage-1||currenPage >=1 )
+    }
+    const handleNext=()=>{
+      setCurrenPage(currenPage+1 )
+    }
+   
+   
+
 
     useEffect(()=>{
       if(typeSelecter==='all Pokemons'){
@@ -61,7 +57,7 @@ const PokedexPage = () => {
      setInputValue (inputSearch.current.value.trim().toLowerCase())
     }
 
-    const pokeFiltered=pokemons?.results.filter(poke=>poke.name.includes(inputValue))
+   
     
     
   return (
@@ -73,14 +69,16 @@ const PokedexPage = () => {
           <input className="input_pokemon" ref={inputSearch} type="text" placeholder="input name of the pokemon"/>
           <button className="search_btn">Search</button>
         </form>
-        <section>
-          <ul>
-            <li >{'<<'}</li>
-            <li >{'<'}</li>
+        <section className="paginacion_poke">
           
-            <li>{'>'}</li>
-            <li>{'>>'}</li>
-          </ul>
+         <div>
+          <img className="btn_back" onClick={handledBack} src="/back.png" alt="" />
+         </div>
+
+        <div>
+          <img onClick={handleNext} className="btn_next" src="public/next.png" alt="" />
+        </div>
+        
         </section>
      
       <div className="poke_select">
@@ -90,7 +88,7 @@ const PokedexPage = () => {
          </div>
         <div className="card_poke">
           {
-            pokeFiltered?.map(poke =>(
+            pokepaginated?.map(poke =>(
               <PokeCard 
                 key={poke.url}
                 url={poke.url}

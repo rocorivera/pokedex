@@ -85,6 +85,44 @@ background: linear-gradient(0deg, rgba(250,248,248,0.7080745341614907) 56%, rgba
     position: absolute;
 
 }
+.paginacion_poke{
+    z-index: 1;
+    display: flex;
+    margin-top: 16rem;
+    
+}
+.btn_back{
+    display: flex;
+    margin-right: 12rem;
+    height: 4rem;
+    align-items: center;
+    width: 4rem;
+    border-radius: 2rem;
+    background: rgb(0,247,62);
+    background: linear-gradient(90deg, rgba(0,247,62,0.775438596491228) 0%, rgba(250,2,2,0.7947368421052632) 34%, rgba(249,251,11,0.8280701754385965) 61%, rgba(0,215,244,0.7859649122807018) 100%);
+    cursor: pointer;
+    transition: transforn 200ms ease;
+}
+.btn_back:hover{
+    transform: scale(1.1);
+    transition-delay: 100ms;
+}
+.btn_next{
+    width: 4rem;
+height: 4rem;
+display: flex;
+align-items: center;
+border-radius: 2rem;
+background: rgb(0,247,62);
+background: linear-gradient(90deg, rgba(0,247,62,0.775438596491228) 0%, rgba(250,2,2,0.7947368421052632) 34%, rgba(249,251,11,0.8280701754385965) 61%, rgba(0,215,244,0.7859649122807018) 100%);
+cursor: pointer;
+transition: transforn 200ms ease;         
+}
+.btn_next:hover{
+    transform: scale(1.1);
+    transition-delay: 100ms;
+}
+
 .trainer_poke{
 align-items: center;
 padding: 1.5rem;
@@ -124,7 +162,7 @@ transition: opacity 200ms ease,
 }
 .poke_select{
     z-index: 1;
-    margin-top: 15rem;
+    margin-top: -4rem;
 }
 .value_poke{
     height: 3rem;
@@ -294,7 +332,7 @@ background-color: rgba(104,233,246,1) ;
 background-color: rgba(71,138,147,1) ;
 }
 .dark-type{
-background-color: rgba(0,0,0,1);
+background-color: rgb(70, 70, 70);
 }
 .fairy-type{
     background-color:rgba(214,135,238,1) ;
@@ -313,47 +351,28 @@ background-color: rgba(0,0,0,1);
    padding: 7px;
 }
 .stat_id{
-display: grid;
+display: flex;
 align-items: center;
 justify-content: start;
 align-content: center;
 padding-left: 3px;
-
-
+flex-direction: column;
 }
-.infostat{
-
+.img_stats{
+    
+    width: 90%;
+    background-color: rgba(174, 172, 172, 0.687);
+   
 }
-.basestat{
-
-}
-/*.img_stats{
-    height: 1.3rem;
-   position: absolute;
-    width: 13rem;
-    background-color: white;
-    border: black 1px solid;
-    display: flex;
-    flex-direction: row;
-    align-content: center;
-    justify-content: center;
-    align-items: center;
-}*/
 .img_stat{
-    background-color: rgb(17, 252, 142);
-    height: 1.3rem;
-     width: 80%;
+    width:100%  ; 
+    background-color: #eedc39fa;
+    height: 20px;
     display: flex;
-    align-items: center;
-    border: 1px solid black;
-    position: relative;
-    top: 0%;
     
    
-    
-    
-    
 }
+
 .moves{
     border: 0.5em solid black;
     width: 90%;

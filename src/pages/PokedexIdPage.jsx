@@ -15,6 +15,8 @@ const PokedexIdPage = () => {
      },[id])
      console.log(pokemon)
 
+    const totalStats=100
+
   return (
     <div className="id_id">
       <img  className="id_pokeimg" src="/poke.png" alt="" />
@@ -49,7 +51,7 @@ const PokedexIdPage = () => {
                <div className="stats_id">Stats</div>
             }
             {
-               pokemon?.stats.map(infoStats=>(<div className="stat_id" key={infoStats.stat.url}><span className="infostat">{infoStats.stat.name}</span><span className="basestat">{infoStats.base_stat}</span><div className="img_stats" ></div><div className="img_stat"></div></div>))
+               pokemon?.stats.map(infoStats=>(<div className="stat_id" key={infoStats.stat.url}><span className="infostat">{infoStats.stat.name}</span><span className="basestat">{infoStats.base_stat}</span><span className="img_stats" ><span className="img_stat">{totalStats-infoStats.base_stat}</span></span></div>))
             }
          </div>
       </div>

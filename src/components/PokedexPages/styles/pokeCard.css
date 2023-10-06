@@ -122,7 +122,7 @@ background: linear-gradient(0deg, rgba(255,255,255,0.9964912280701754) 0%, rgba(
 }
 .dark-gradient{
     background: rgb(253,248,254);
-background: linear-gradient(0deg, rgba(253,248,254,0.9964912280701754) 0%, rgba(0,0,0,1) 100%);
+background: linear-gradient(0deg, rgba(253,248,254,0.9964912280701754) 0%, rgb(0, 0, 0) 100%);
 }
 .steel-gradient{
     background: rgb(248,254,251);
@@ -238,7 +238,7 @@ border-color: rgba(0,13,255,1);
     color:rgba(247,107,255,1) ;
 }
 .dark-color{
-    color: rgba(0,0,0,1) ;
+    color: rgb(0, 0, 0) ;
 }
 .steel-color{
     color:rgba(61,92,77,1) ;

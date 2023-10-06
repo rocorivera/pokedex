@@ -10,6 +10,7 @@ const getApi=()=>{
     .then(res=>setInfoAPI(res.data))
     .catch(err=>console.log(err))
 }
+
 const getTypeApi=(urlType)=>{
     axios.get(urlType)
     .then(res=>{
