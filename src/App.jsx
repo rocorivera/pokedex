@@ -3,8 +3,8 @@ import { Routes, Route } from 'react-router-dom'
 import './App.css'
 import HomaPage from './pages/HomaPage'
 import PokedexPage from './pages/PokedexPage'
-import PokedexIdPage from './pages/POkedexIdPage'
-import ProtectedRoutes from './pages/protectedRoutes'
+import PokedexIdPage from './pages/PokedexIdPage'
+import ProtectedRoutes from './pages/ProtectedRoutes'
 
 
 function App() {
