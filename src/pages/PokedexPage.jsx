@@ -76,7 +76,7 @@ const pokeFiltered=pokemons?.results.filter(poke=>poke.name.toLowerCase().includ
          </div>
 
         <div>
-          <img onClick={handleNext} className="btn_next" src="public/next.png" alt="" />
+          <img onClick={handleNext} className="btn_next" src="/next.png" alt="" />
         </div>
         
         </section>

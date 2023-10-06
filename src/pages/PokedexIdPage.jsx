@@ -13,7 +13,7 @@ const PokedexIdPage = () => {
      useEffect(()=>{
         getPokemon()
      },[id])
-     console.log(pokemon)
+     
 
     const totalStats=100
 
